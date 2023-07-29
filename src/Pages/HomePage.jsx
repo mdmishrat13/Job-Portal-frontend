@@ -37,22 +37,22 @@ const HomePage = () => {
   return (
     <>
       <div className="flex items-center flex-col justify-center w-full bg-[#3B64F2]">
-        <div className="flex flex-col gap-8 mt-4 p-2">
+        <div className="flex flex-col mt-4 p-2">
           {/* heading text  */}
 
-          <h1 className="text-5xl text-white font-bold text-center">
+          <h1 className="text-5xl text-white font-bold text-center md:my-6 pt-12 max-w-[700px] mx-auto">
             {" "}
             The #1 <span className="text-[#67F583]">Job Board for</span> Hiring
             or Find your next job
           </h1>
-          <p className="text-center text-white text-xl">
+          <p className="text-center text-white text-xl max-w-[700px] mx-auto mt-4 mb-6">
             Each month, more than 3 million job seekers turn to website in their
             search for work, making over 140,000 applications every single day{" "}
           </p>
 
           {/* search box  */}
 
-          <div className="md:bg-white rounded flex flex-col md:flex-row items-center justify-center">
+          <div className="md:bg-white rounded flex flex-col md:flex-row items-center justify-center md:my-6">
             <div className="div p-4 flex w-full items-center gap-1">
               <BiSolidShoppingBags className="text-white md:text-gray-400 text-2xl text-center" />
                 <select
@@ -91,20 +91,19 @@ const HomePage = () => {
             </div>
             <button
               type="submit"
-              className="py-2 px-4 bg-[#3B64F2] hover:bg-[#05264E] mr-2 rounded text-white flex items-center gap-2"
+              className="py-2 px-4 bg-white transition-all hover:bg-gray-300 text-black md:bg-[#3B64F2] md:hover:bg-[#05264E] mr-2 rounded md:text-white flex items-center gap-2"
             >
               <AiOutlineSearch className="inline" /> Search
             </button>
           </div>
-          <p className="text-center font-md text-white">
-            {" "}
-            <span className="font-bold">Popular Searches:</span> Design,
+          <p className="text-center font-md text-white my-6">
+            <span className="font-bold ">Popular Searches:</span> Design,
             Development, Manager, Senior
           </p>
         </div>
       </div>
       {/* swipper section  */}
-      <div className=" bg-[#3B64F2]">
+      <div className="bg-[#3B64F2]">
         <div className="w-[90%] mx-auto">
           <Swiper />
         </div>
@@ -121,7 +120,7 @@ const HomePage = () => {
           </p>
           <div className="flex items-center justify-center flex-wrap gap-4 py-5">
             {category.map((item)=>(
-            <div key={item.Id} className="py-3 px-4 border rounded-lg hover:text-blue-500 hover:border-blue-500 cursor-pointer">
+            <div key={item.Id} className="py-3 px-4 border rounded-lg hover:text-blue-500 hover:border-blue-500 cursor-pointer transition-all">
               {item.name}
             </div>
             ))}
@@ -129,7 +128,7 @@ const HomePage = () => {
         </div>
           <div className="grid gap-3 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 py-5">
             {Array.from({length:8}).map((item)=>(
-              <div className="p-4 shadow-lg rounded-md hover:mt-[-5px] cursor-pointer">
+              <div className="p-4 shadow-lg rounded-md hover:mt-[-5px] cursor-pointer transition-all">
               <img className="block max-w-full" src={webDev} />
               <h1 className="font-bold text-xl py-2">
                 Full Stack Web Developer
@@ -152,8 +151,6 @@ const HomePage = () => {
               </p>
             </div>
             ))}
-            
-           
           </div>
 
           {/* Top Candidates section  */}
@@ -169,7 +166,7 @@ const HomePage = () => {
           {/* top candidates cards sections  */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center items-center py-4">
             {Array.from({length: 6}).map((item)=>(
-            <div className="shadow-md p-4 border border-gray-300 bg-slate-100 hover:bg-white rounded cursor-pointer">
+            <div className="shadow-md p-4 border border-gray-300 bg-slate-100 hover:bg-white rounded cursor-pointer transition-all">
               <div className="flex gap-2 justify-center gap-2">
               <img src={webDev} alt="" className="block w-24 h-24 rounded-full flex" />
               <div className="py-2"><h1 className="text-xl font-bold">Selena Hodkiewicz</h1>
@@ -183,7 +180,7 @@ const HomePage = () => {
             </div>)
             )}
           </div>
-          <button className="px-5 py-3 bg-gray-500 text-white hover:bg-gray-700 rounded-md my-4 flex items-center gap-1"><TbLoader/> See More</button>
+          <button className="px-5 py-3 bg-gray-500 text-white hover:bg-gray-700 rounded-md my-4 flex items-center gap-1 transition-all"><TbLoader/> See More</button>
         </div>
 
         {/* top recruiters section  */}
@@ -195,9 +192,9 @@ const HomePage = () => {
             ipsam?
           </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-5 items-center-justify-center gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-5 hover:bg-white items-center-justify-center gap-4">
         {Array.from({length: 6}).map((item)=>(
-          <div className="p-3 bg-gray-100 rounded-md shadow-md border border-gray-200">
+          <div className="p-3 bg-gray-100 hover:bg-white rounded-md shadow-md border border-gray-200 transition-all">
           <img src={boyImg} className="block w-16 h-16 rounded-md" alt="WebDev" />
           <h1 className="text-xl py-2">LinkdeIn</h1>
           <span className="flex text-yellow-500"><AiFillStar/> <AiFillStar/><AiFillStar/><AiFillStar/></span>
